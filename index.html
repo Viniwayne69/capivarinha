@@ -39,7 +39,7 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root{--p1:#6d28d9;--p2:#4c1d95;--p3:#2e1065;--p4:#7c3aed;--pl:#c4b5fd;--green:#c8ff00;--white:#fff;--tb:rgba(255,255,255,.95);--tf:rgba(255,255,255,.5);--cb:rgba(255,255,255,.1);--cbr:rgba(255,255,255,.2)}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -134,7 +134,9 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .p5{width:4px;height:4px;background:var(--pl);left:70%;animation-duration:10s;animation-delay:3s;opacity:.5}
 .p6{width:3px;height:3px;background:var(--green);left:85%;animation-duration:7s;animation-delay:5s;opacity:.7}
 .tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--green);margin-bottom:14px;line-height:1.5}
-.h2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(22px,5.5vw,50px);line-height:1.2;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:16px;color:var(--white)}
+.h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(28px,6vw,58px);line-height:1.3;letter-spacing:.04em;text-transform:uppercase;margin-bottom:16px;color:var(--white)}
+.h2 span.bg{background:var(--p1);padding:2px 14px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.h2 span.bgg{background:var(--green);color:var(--p3);padding:2px 14px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .h2 .g{color:var(--green)}
 .ld{font-size:15px;color:var(--tb);line-height:1.8;max-width:540px}
 .rv{opacity:0;transition:opacity .7s ease}
@@ -268,7 +270,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .cs{padding:80px 24px;background:linear-gradient(135deg,var(--p2) 0%,var(--p1) 50%,var(--p2) 100%);text-align:center;position:relative;overflow:hidden}
 .cs::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,255,0,.08) 0%,transparent 60%);pointer-events:none}
 .cin{position:relative;z-index:2;max-width:700px;margin:0 auto}
-.ch2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,5vw,62px);letter-spacing:-.01em;text-transform:uppercase;line-height:1.1;margin-bottom:20px;color:var(--white)}
+.ch2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(38px,5.5vw,70px);letter-spacing:.04em;text-transform:uppercase;line-height:1;margin-bottom:20px;color:var(--white)}
 .ch2 .g{color:var(--green)}
 .cp{font-size:16px;color:var(--tb);line-height:1.8;margin-bottom:36px;max-width:460px;margin-left:auto;margin-right:auto}
 .wa{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#fff;font-family:'Syne',sans-serif;font-weight:700;font-size:15px;letter-spacing:.05em;padding:18px 42px;border-radius:100px;transition:all .3s;box-shadow:0 8px 36px rgba(37,211,102,.3);position:relative;overflow:hidden}
@@ -591,7 +593,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
     <div class="rv">
       <span class="tag">✈️ Sobre a Fundadora</span>
-      <h2 class="h2">Viagem com quem<br/><span class="g">realmente cuida</span></h2>
+      <h2 class="h2"><span class="bg">Viagem com quem</span><br/><span class="bgg">realmente cuida</span></h2>
       <p class="ld" style="margin-top:16px">Por trás da Finder Travel está <strong style="color:var(--white)">Ana Carolina</strong>, uma profissional movida por propósito: facilitar a vida de quem quer viajar com segurança, economia e tranquilidade.</p>
       <p class="ld" style="margin-top:12px">Com formação em publicidade e uma trajetória marcada por coragem, Ana construiu sua história enfrentando desafios que fortaleceram sua visão de atendimento humano e próximo.</p>
       <p class="ld" style="margin-top:12px">Mais do que vender passagens, ela acredita em <strong style="color:var(--green)">cuidar de pessoas</strong>. Seu diferencial está na escuta, na transparência e na dedicação em encontrar sempre a melhor solução — como se cada viagem fosse a sua própria.</p>
@@ -614,7 +616,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="fq-inner">
     <div style="text-align:center;margin-bottom:0" class="rv">
       <span class="tag">Cotação Gratuita</span>
-      <h2 class="h2">Monte sua <span class="g">viagem dos sonhos</span></h2>
+      <h2 class="h2"><span class="bg">Monte sua</span> <span class="bgg">viagem dos sonhos</span></h2>
       <p class="ld" style="margin:12px auto 0">Preencha abaixo e receba sua cotação personalizada direto no WhatsApp em minutos.</p>
     </div>
     <div class="fq-box rv">
@@ -649,7 +651,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
     <div class="rv">
       <span class="tag">Por que nos escolher</span>
-      <h2 class="h2">Viaje com<br/>quem <span class="g">entende</span></h2>
+      <h2 class="h2"><span class="bg">Viaje com</span><br/><span class="bg">quem</span> <span class="bgg">entende</span></h2>
       <p class="ld" style="margin-top:14px">A Finder Travel nasceu para simplificar cada etapa da sua jornada. Com experiência e dedicação, transformamos sonhos em realidade.</p>
       <ul class="fl">
         <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22" style="color:var(--green)"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="fit">Atendimento Personalizado</div><div class="fid">Suporte exclusivo para cada etapa da sua viagem, do planejamento ao retorno.</div></div></li>
@@ -666,7 +668,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap">
     <div style="text-align:center" class="rv">
       <span class="tag">Depoimentos</span>
-      <h2 class="h2">O que nossos <span class="g">Clientes dizem</span></h2>
+      <h2 class="h2"><span class="bg">O que nossos</span> <span class="bgg">Clientes dizem</span></h2>
       <p class="ld" style="margin:12px auto 0">Viajantes de todo o Brasil já confiam na Finder Travel.</p>
     </div>
     <div class="tg-cols rv">
@@ -707,9 +709,10 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap" style="position:relative;z-index:1">
     <div style="text-align:center;margin-bottom:56px" class="rv">
       <span class="tag">Como Funciona</span>
-      <h2 class="h2">Sua viagem em<br/><span class="g">Três passos simples</span></h2>
+      <h2 class="h2"><span class="bg">Sua viagem em</span><br/><span class="bgg">Três passos simples</span></h2>
     </div>
     <div class="cf-grid rv">
+
       <div class="cf-card">
         <div class="cf-num">01</div>
         <div class="cf-icon-wrap" style="background:linear-gradient(135deg,rgba(200,255,0,.2),rgba(200,255,0,.05));border-color:rgba(200,255,0,.4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="34" height="34" style="color:var(--green)"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
@@ -754,7 +757,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap">
     <div style="text-align:center" class="rv">
       <span class="tag">O que oferecemos</span>
-      <h2 class="h2">Nossos <span class="g">Serviços</span></h2>
+      <h2 class="h2"><span class="bg">Nossos</span> <span class="bgg">Serviços</span></h2>
       <p class="ld" style="margin:12px auto 0">Tudo que você precisa para uma viagem perfeita, em um só lugar.</p>
     </div>
     <div class="sg rv">
@@ -792,7 +795,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap">
     <div style="text-align:center;margin-bottom:48px" class="rv">
       <span class="tag">Para quem é</span>
-      <h2 class="h2">A Finder Travel é <span class="g">para você</span></h2>
+      <h2 class="h2"><span class="bg">A Finder Travel é</span> <span class="bgg">para você</span></h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" class="rv" id="forwho-grid">
       <div class="fwcard">
@@ -826,7 +829,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 </section>
 <!-- GALERIA -->
 <div class="gw">
-  <div class="gh rv"><span class="tag">Galeria de Destinos</span><h2 class="h2">Momentos <span class="g">Inesquecíveis</span></h2></div>
+  <div class="gh rv"><span class="tag">Galeria de Destinos</span><h2 class="h2"><span class="bg">Momentos</span> <span class="bgg">Inesquecíveis</span></h2></div>
   <div class="gt">
     <div class="gcd"><img src="images/img_jpg_005.jpg" alt="Buenos Aires, Argentina" loading="lazy"/><div class="gcd-overlay"></div><div class="gcl">Buenos Aires, Argentina</div></div>
     <div class="gcd"><img src="images/img_jpg_006.jpg" alt="Bali, Indonésia" loading="lazy"/><div class="gcd-overlay"></div><div class="gcl">Bali, Indonésia</div></div>
@@ -853,7 +856,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 <!-- PACOTES -->
 <section style="padding:64px 0;text-align:center" id="pk">
   <div class="wrap">
-    <div class="rv"><span class="tag">Nossos Pacotes</span><h2 class="h2">Escolha seu <span class="g">Pacote</span></h2><p class="ld" style="margin:12px auto 0">Pacotes personalizados para todo perfil de viajante. Todos com consultoria gratuita incluída.</p></div>
+    <div class="rv"><span class="tag">Nossos Pacotes</span><h2 class="h2"><span class="bg">Escolha seu</span> <span class="bgg">Pacote</span></h2><p class="ld" style="margin:12px auto 0">Pacotes personalizados para todo perfil de viajante. Todos com consultoria gratuita incluída.</p></div>
     <div class="pg rv">
       <div class="pc"><div class="pn">Explorador</div><div class="pd">Ideal para turismo nacional com praticidade</div><ul class="pf"><li>Passagem aérea nacional</li><li>Hospedagem econômica selecionada</li><li>Seguro viagem básico</li><li>Suporte via WhatsApp</li></ul><a href="https://wa.me/5581994816709" class="btn-o" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
       <div class="pc hot"><div class="pbdg">Mais Popular</div><div class="pn">Viajante</div><div class="pd">Completo para viagens nacionais e internacionais</div><ul class="pf"><li>Passagem nacional ou internacional</li><li>Hospedagem selecionada por especialistas</li><li>Seguro viagem completo</li><li>Suporte 24h dedicado</li><li>Transfer no destino</li></ul><a href="https://wa.me/5581994816709" class="btn-g" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
@@ -868,7 +871,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap">
     <div style="text-align:center;margin-bottom:48px" class="rv">
       <span class="tag">Dúvidas frequentes</span>
-      <h2 class="h2">Perguntas <span class="g">Frequentes</span></h2>
+      <h2 class="h2"><span class="bg">Perguntas</span> <span class="bgg">Frequentes</span></h2>
     </div>
     <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px" class="rv">
       <div class="faq-item">
