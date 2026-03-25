@@ -616,8 +616,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
     <div class="fq-box rv">
       <div class="fq-grid">
-        <div class="fq-field"><label class="fq-label">Seu nome</label><input class="fq-input" id="fq-nome" type="text" placeholder="Ex: Maria Silva"/></div>
-        <div class="fq-field"><label class="fq-label">Seu WhatsApp</label><input class="fq-input" id="fq-tel" type="tel" placeholder="(81) 99999-9999"/></div>
+        <div class="fq-field full"><label class="fq-label">Seu nome</label><input class="fq-input" id="fq-nome" type="text" placeholder="Ex: Maria Silva"/></div>
         <div class="fq-field"><label class="fq-label">Destino desejado</label><input class="fq-input" id="fq-destino" type="text" placeholder="Ex: Paris, Orlando, Noronha..."/></div>
         <div class="fq-field"><label class="fq-label">Tipo de viagem</label><select class="fq-select" id="fq-tipo"><option value="">Selecione...</option><option>Nacional</option><option>Internacional</option><option>Lua de mel</option><option>Viagem em família</option><option>Viagem em grupo</option><option>Intercâmbio</option></select></div>
         <div class="fq-field"><label class="fq-label">Quando quer viajar?</label><input class="fq-input" id="fq-ida" type="text" placeholder="Ex: Julho de 2026, nas férias, em 3 meses..."/></div>
@@ -978,38 +977,27 @@ function closeDestModal(){document.getElementById('dest-modal').style.display='n
 document.getElementById('dest-modal').addEventListener('click',function(e){if(e.target===this)closeDestModal();});
 document.addEventListener('keydown',function(e){if(document.getElementById('dest-modal').style.display==='flex'){if(e.key==='ArrowRight')modalNext();if(e.key==='ArrowLeft')modalPrev();if(e.key==='Escape')closeDestModal();}});
 window.addEventListener('scroll',function(){var btn=document.getElementById('back-to-top');btn.classList.toggle('show',window.scrollY>600);});
-document.getElementById('fq-tel').addEventListener('input',function(e){
-  var v=e.target.value.replace(/\D/g,'').substring(0,11);
-  if(v.length>10){v=v.replace(/^(\d{2})(\d{5})(\d{4}).*/,'($1) $2-$3');}
-  else if(v.length>6){v=v.replace(/^(\d{2})(\d{4})(\d*).*/,'($1) $2-$3');}
-  else if(v.length>2){v=v.replace(/^(\d{2})(\d*).*/,'($1) $2');}
-  else if(v.length>0){v=v.replace(/^(\d*).*/,'($1');}
-  e.target.value=v;
-});
 function enviarCotacao(){
   var nomeEl=document.getElementById('fq-nome');
-  var telEl=document.getElementById('fq-tel');
   var destinoEl=document.getElementById('fq-destino');
   var tipo=document.getElementById('fq-tipo').value;
   var ida=document.getElementById('fq-ida').value.trim();
   var pessoas=document.getElementById('fq-pessoas').value;
   var nome=nomeEl.value.trim();
-  var tel=telEl.value.trim();
   var destino=destinoEl.value.trim();
   var erro=false;
-  [nomeEl,telEl,destinoEl].forEach(function(el){el.style.borderColor='';});
+  [nomeEl,destinoEl].forEach(function(el){el.style.borderColor='';});
   if(!nome){nomeEl.style.borderColor='#ff4d4d';nomeEl.focus();erro=true;}
-  if(!tel){telEl.style.borderColor='#ff4d4d';if(!erro){telEl.focus();}erro=true;}
   if(!destino){destinoEl.style.borderColor='#ff4d4d';if(!erro){destinoEl.focus();}erro=true;}
   if(erro){
     var msgErro=document.getElementById('fq-erro');
     if(!msgErro){msgErro=document.createElement('p');msgErro.id='fq-erro';msgErro.style.cssText='color:#ff4d4d;font-size:13px;text-align:center;margin-top:10px;font-weight:600;';document.querySelector('.fq-btn').insertAdjacentElement('afterend',msgErro);}
-    msgErro.textContent='⚠️ Preencha seu nome, WhatsApp e destino para continuar.';
+    msgErro.textContent='⚠️ Preencha seu nome e o destino para continuar.';
     return;
   }
   var msgErro=document.getElementById('fq-erro');
   if(msgErro)msgErro.remove();
-  var msg='🌍 *SOLICITAÇÃO DE COTAÇÃO — FINDER TRAVEL*\n\n👤 *Nome:* '+nome+'\n📱 *WhatsApp:* '+tel+'\n✈️ *Destino:* '+destino+'\n🗂️ *Tipo:* '+(tipo||'Não informado')+'\n👥 *Pessoas:* '+(pessoas||'Não informado')+'\n📅 *Quando:* '+(ida||'Não informado')+'\n\nAguardo o retorno! 😊';
+  var msg='🌍 *SOLICITAÇÃO DE COTAÇÃO — FINDER TRAVEL*\n\n👤 *Nome:* '+nome+'\n✈️ *Destino:* '+destino+'\n🗂️ *Tipo:* '+(tipo||'Não informado')+'\n👥 *Pessoas:* '+(pessoas||'Não informado')+'\n📅 *Quando:* '+(ida||'Não informado')+'\n\nAguardo o retorno! 😊';
   window.open('https://wa.me/5581994816709?text='+encodeURIComponent(msg),'_blank');
 }
 
