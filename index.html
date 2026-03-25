@@ -276,33 +276,6 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
 .wa::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:btnShine 2.5s ease-in-out infinite}
 .cn{margin-top:16px;font-size:12px;color:var(--tf);letter-spacing:.06em}
-/* 3D ROOM */
-.room-wrap{width:100%;max-width:900px;margin:0 auto 40px;position:relative;overflow:hidden;border-radius:20px}
-.room-content{display:block;transform-origin:center center}
-.room-full{position:relative;width:100%;height:0;padding-bottom:56.25%;overflow:hidden;background:#020818}
-.room-full .hue-anim{position:absolute;inset:0;animation:roomHue 20s ease-in-out infinite;z-index:0}
-@keyframes roomHue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(60deg)}}
-.room-inner{position:absolute;inset:0;perspective:600px;z-index:1}
-.room-cube{position:absolute;width:54000px;height:100%;transform-style:preserve-3d;transform-origin:center center}
-.room-face{position:absolute;display:flex;align-items:center;backface-visibility:hidden}
-.room-face.r-top{width:54000px;height:300px;top:0;left:0;transform-origin:center bottom;transform:rotateX(45deg) translateZ(0);background:linear-gradient(180deg,#020818 0%,rgba(109,40,217,.3) 100%);border-bottom:2px solid rgba(200,255,0,.4)}
-.room-face.r-bottom{width:54000px;height:300px;bottom:0;left:0;transform-origin:center top;transform:rotateX(-45deg);background:linear-gradient(0deg,#020818 0%,rgba(46,16,101,.4) 100%);border-top:2px solid rgba(200,255,0,.3);opacity:.6}
-.room-face.r-left{width:54000px;height:100%;top:0;left:0;transform-origin:center center;animation:roomScrollLeft 180s linear infinite;white-space:nowrap;overflow:hidden}
-.room-face.r-left .r-text{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,8vw,80px);color:rgba(255,255,255,.08);text-transform:uppercase;letter-spacing:.08em;line-height:1;padding:0 40px;display:inline-block}
-.room-face.r-left .r-text span{color:rgba(200,255,0,.15)}
-.room-face.r-back{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:5}
-.room-face.r-back .r-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,6vw,64px);color:var(--white);text-transform:uppercase;text-align:center;line-height:1.1;text-shadow:0 0 60px rgba(200,255,0,.3),0 0 120px rgba(109,40,217,.4);animation:roomTextGlow 4s ease-in-out infinite}
-.room-face.r-back .r-title span{color:var(--green);display:block}
-@keyframes roomTextGlow{0%,100%{text-shadow:0 0 40px rgba(200,255,0,.2),0 0 80px rgba(109,40,217,.3)}50%{text-shadow:0 0 80px rgba(200,255,0,.5),0 0 160px rgba(109,40,217,.5)}}
-@keyframes roomScrollLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.room-glow-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:3px;background:var(--green);box-shadow:0 0 30px var(--green),0 0 60px var(--green);opacity:.5;z-index:6;border-radius:2px}
-.room-glow-bot{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60%;height:2px;background:var(--green);box-shadow:0 0 20px var(--green),0 0 40px rgba(200,255,0,.3);opacity:.3;z-index:6;border-radius:2px}
-.room-lines{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
-.room-lines .rl{position:absolute;background:rgba(200,255,0,.08);box-shadow:0 0 8px rgba(200,255,0,.1)}
-.rl-h{width:100%;height:1px}
-.rl-v{width:1px;height:100%}
-.room-reflect{position:absolute;bottom:0;left:0;right:0;height:40%;z-index:3;background:linear-gradient(to top,rgba(200,255,0,.03),transparent);-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.3),transparent);mask-image:linear-gradient(to top,rgba(0,0,0,.3),transparent);pointer-events:none}
-@media(max-width:600px){.room-wrap{border-radius:14px}.room-face.r-back .r-title{font-size:clamp(22px,7vw,36px)}}
 /* FOOTER */
 .fw{background:rgba(20,5,50,.97);border-top:3px solid var(--green);padding:64px 0 28px;position:relative;overflow:hidden;z-index:1}
 .fw .wrap{position:relative;z-index:1}
@@ -669,7 +642,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="wim rv">
       <img class="wia" src="images/img_jpg_003.jpg" alt="Viajantes embarcando" loading="lazy"/>
       <img class="wib" src="images/img_jpg_004.jpg" alt="Malas de viagem" loading="lazy"/>
-      <div class="wbdg" style="font-size:13px;font-weight:700;letter-spacing:.05em">RESPOSTA<br>RÁPIDA</div>
+      <div class="wbdg"><span style="font-size:16px;display:block;margin-bottom:2px">★★★★★</span><big>5.0</big> Google</div>
     </div>
     <div class="rv">
       <span class="tag">Por que nos escolher</span>
@@ -737,7 +710,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <div class="cf-card">
         <div class="cf-num">01</div>
         <div class="cf-icon-wrap" style="background:linear-gradient(135deg,rgba(200,255,0,.2),rgba(200,255,0,.05));border-color:rgba(200,255,0,.4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="34" height="34" style="color:var(--green)"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
-        <div class="cf-badge" style="background:rgba(200,255,0,.15);color:var(--green);border-color:rgba(200,255,0,.3)">Resposta em 5 min</div>
+        <div class="cf-badge" style="background:rgba(200,255,0,.15);color:var(--green);border-color:rgba(200,255,0,.3)">Resposta rápida</div>
         <h3 class="cf-title">Fale com a gente</h3>
         <p class="cf-desc">Manda uma mensagem pelo WhatsApp ou preenche a cotação acima. Conta o destino, as datas e o orçamento — a gente cuida do resto.</p>
         <a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="cf-cta">Falar agora →</a>
@@ -934,31 +907,10 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
   </div>
 </section>
-<!-- CTA FINAL 3D -->
+<!-- CTA FINAL -->
 <section class="cs">
   <div class="cin rv">
-    <!-- CUBO 3D -->
-    <div class="cube-scene">
-      <div class="cube-3d">
-        <div class="face front">Pronto para<br/><span>Embarcar?</span></div>
-        <div class="face back">Sua viagem<br/><span>começa aqui</span></div>
-        <div class="face right">Pronto para<br/><span>Embarcar?</span></div>
-        <div class="face left">Sua viagem<br/><span>começa aqui</span></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
-    </div>
-    <!-- REFLEXO -->
-    <div class="cube-reflect">
-      <div class="cube-3d">
-        <div class="face front">Pronto para<br/><span>Embarcar?</span></div>
-        <div class="face back">Sua viagem<br/><span>começa aqui</span></div>
-        <div class="face right">Pronto para<br/><span>Embarcar?</span></div>
-        <div class="face left">Sua viagem<br/><span>começa aqui</span></div>
-        <div class="face top"></div>
-        <div class="face bottom"></div>
-      </div>
-    </div>
+    <div class="ch2">Pronto para <span class="g">Embarcar?</span></div>
     <p class="cp">Fale agora com a Ana e receba sua cotação personalizada em minutos. Sem compromisso, sem burocracia.</p>
     <a href="https://wa.me/5581994816709" class="wa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultoria Gratuita pelo WhatsApp</a>
   </div>
