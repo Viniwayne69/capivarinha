@@ -159,7 +159,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .gcd:hover::after{opacity:1;transform:translateY(0)}
 /* SERVICES */
 .sg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
-.svc-card{background:rgba(255,255,255,.07);border:1px solid rgba(196,181,253,.2);border-radius:20px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.svc-card{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:20px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .svc-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.3);border-color:rgba(200,255,0,.4)}
 .svc-thumb{width:100%;height:180px;overflow:hidden;position:relative}
 .svc-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
@@ -167,7 +167,8 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .svc-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(20,5,50,.8) 100%)}
 .svc-body{padding:22px 24px 26px}
 .svc-ic{width:48px;height:48px;border-radius:12px;background:rgba(200,255,0,.12);border:1px solid rgba(200,255,0,.3);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:12px;color:var(--green)}
-.svc-t{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:15px;margin-bottom:8px;color:var(--white);text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+.svc-t{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:20px;margin-bottom:8px;color:var(--white);text-transform:uppercase;letter-spacing:.04em;line-height:1.2}
+.svc-t span.bg3{background:var(--p1);padding:1px 10px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:1px 1px 0 var(--p3),2px 2px 0 var(--p3)}
 .svc-d{font-size:13px;color:var(--tb);line-height:1.7;margin-bottom:18px}
 .svc-btn{display:inline-flex;align-items:center;gap:6px;background:var(--green);color:var(--p3);font-family:'Syne',sans-serif;font-weight:700;font-size:12px;padding:9px 20px;border-radius:100px;text-decoration:none;transition:transform .2s,box-shadow .2s}
 .svc-btn:hover{transform:scale(1.05);box-shadow:0 6px 20px rgba(200,255,0,.35)}
@@ -190,7 +191,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .wbdg{position:absolute;top:42%;left:42%;transform:translate(-50%,-50%);background:var(--green);color:var(--p3);font-weight:800;font-size:12px;padding:14px 18px;border-radius:16px;text-align:center;z-index:3;box-shadow:0 0 36px rgba(200,255,0,.35);white-space:nowrap}
 .wbdg big{display:block;font-size:26px;line-height:1;margin-bottom:2px}
 .fl{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:28px}
-.fi{display:flex;align-items:flex-start;gap:14px;background:var(--cb);border:1px solid var(--cbr);border-radius:12px;padding:18px;transition:all .3s}
+.fi{display:flex;align-items:flex-start;gap:14px;background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:12px;padding:18px;transition:all .3s;box-shadow:3px 3px 0 rgba(46,16,101,.7),6px 6px 0 rgba(46,16,101,.4)}
 .fi:hover{border-color:rgba(200,255,0,.4);background:rgba(200,255,0,.08);transform:translateX(8px)}
 .fic{width:42px;height:42px;flex-shrink:0;border-radius:12px;background:rgba(200,255,0,.12);border:1px solid rgba(200,255,0,.3);display:flex;align-items:center;justify-content:center;font-size:18px}
 .fit{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;margin-bottom:4px;color:var(--white)}
@@ -203,7 +204,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .tg-col:nth-child(2) .tg-col-inner{animation-duration:16s}
 .tg-col:nth-child(3) .tg-col-inner{animation-duration:16s}
 @keyframes colScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
-.tc{background:var(--cb);border:1px solid var(--cbr);border-radius:24px;padding:28px;width:280px;flex-shrink:0}
+.tc{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:24px;padding:28px;width:280px;flex-shrink:0;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .tc:hover{border-color:rgba(196,181,253,.5);box-shadow:0 12px 40px rgba(124,58,237,.25);transform:translateY(-8px) rotate(.5deg)}
 .tcs{color:var(--green);font-size:13px;letter-spacing:.1em;margin-bottom:12px}
 .tct{font-size:13.5px;color:var(--tb);line-height:1.8;margin-bottom:20px;font-style:italic}
@@ -215,19 +216,20 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 @media(max-width:768px){.h1{white-space:normal;font-size:clamp(42px,11.5vw,58px);text-align:center;letter-spacing:-.02em}.h1 .ac{display:block}.tg-col:nth-child(2){display:none}.tc{width:260px}}
 /* COMO FUNCIONA */
 .cf-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;margin-bottom:64px}
-.cf-card{background:rgba(255,255,255,.05);border:1px solid rgba(196,181,253,.15);border-radius:28px;padding:40px 32px;position:relative;overflow:hidden;transition:transform .4s,border-color .3s,box-shadow .3s}
+.cf-card{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:28px;padding:40px 32px;position:relative;overflow:hidden;transition:transform .4s,border-color .3s,box-shadow .3s;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .cf-card:hover{transform:translateY(-10px);border-color:rgba(200,255,0,.4);box-shadow:0 24px 60px rgba(109,40,217,.35)}
 .cf-card-mid{background:linear-gradient(145deg,rgba(109,40,217,.25),rgba(76,29,149,.15));border-color:rgba(196,181,253,.3)}
 .cf-num{position:absolute;top:20px;right:24px;font-family:'Syne',sans-serif;font-weight:800;font-size:72px;line-height:1;color:rgba(255,255,255,.04);pointer-events:none;user-select:none}
 .cf-icon-wrap{width:76px;height:76px;border-radius:22px;border:1.5px solid;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:transform .3s}
 .cf-card:hover .cf-icon-wrap{transform:scale(1.1) rotate(-4deg)}
 .cf-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;letter-spacing:.04em;padding:5px 12px;border-radius:100px;border:1px solid;margin-bottom:16px}
-.cf-title{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:var(--white);margin-bottom:12px;line-height:1.2;text-transform:uppercase;letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.cf-title{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:24px;color:var(--white);margin-bottom:12px;line-height:1.2;text-transform:uppercase;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.cf-title span.bg3{background:var(--p1);padding:1px 10px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:1px 1px 0 var(--p3),2px 2px 0 var(--p3)}
 .cf-desc{font-size:13.5px;color:var(--tb);line-height:1.8;margin-bottom:22px}
 .cf-cta{font-size:13px;font-weight:700;color:var(--green);letter-spacing:.04em;transition:gap .2s;display:inline-flex;align-items:center;gap:4px}
 .cf-cta:hover{gap:8px}
 .cf-arrow{font-size:28px;color:rgba(200,255,0,.3);text-align:center;padding:0 8px;flex-shrink:0}
-.cf-trust{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.04);border:1px solid rgba(196,181,253,.15);border-radius:20px;padding:28px 40px;flex-wrap:wrap}
+.cf-trust{display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:20px;padding:28px 40px;flex-wrap:wrap;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .cf-trust-item{display:flex;flex-direction:column;align-items:center;gap:4px;padding:0 36px;flex:1;min-width:120px}
 .cf-trust-num{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--green);line-height:1}
 .cf-trust-label{font-size:11px;color:var(--tb);letter-spacing:.04em;text-transform:uppercase;font-weight:500;text-align:center}
@@ -254,7 +256,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 @media(max-width:600px){.fq-grid{grid-template-columns:1fr}.fq-field.full{grid-column:1}}
 /* PACKAGES */
 .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
-.pc{background:var(--cb);border:1px solid var(--cbr);border-radius:20px;padding:32px 26px;position:relative;text-align:left;transition:all .35s;overflow:hidden}
+.pc{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:20px;padding:32px 26px;position:relative;text-align:left;transition:all .35s;overflow:hidden;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .pc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--p4),var(--green));transform:scaleX(0);transform-origin:left;transition:transform .4s}
 .pc:hover{transform:translateY(-10px);border-color:rgba(196,181,253,.5);box-shadow:0 24px 60px rgba(124,58,237,.35)}
 .pc:hover::after{transform:scaleX(1)}
@@ -263,7 +265,8 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 @keyframes borderGlow{0%,100%{border-color:rgba(200,255,0,.3)}50%{border-color:rgba(200,255,0,.9)}}
 .pc.hot{animation:borderGlow 2.5s ease-in-out infinite}
 .pbdg{display:inline-block;background:var(--green);color:var(--p3);font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:16px}
-.pn{font-family:'Syne',sans-serif;font-weight:800;font-size:21px;margin-bottom:6px;color:var(--white)}
+.pn{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:26px;margin-bottom:6px;color:var(--white);letter-spacing:.04em}
+.pn span.bg3{background:var(--p1);padding:1px 10px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:1px 1px 0 var(--p3),2px 2px 0 var(--p3)}
 .pd{font-size:13px;color:var(--tb);margin-bottom:20px;line-height:1.6}
 .pf{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
 .pf li{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--tb)}
@@ -473,10 +476,11 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 /* MASCOTE */
 
 /* PARA QUEM É */
-.fwcard{background:rgba(255,255,255,.07);border:1px solid rgba(196,181,253,.2);border-radius:20px;padding:28px 24px;text-align:center;transition:transform .3s,border-color .3s}
+.fwcard{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:20px;padding:28px 24px;text-align:center;transition:transform .3s,border-color .3s;box-shadow:4px 4px 0 rgba(46,16,101,.7),8px 8px 0 rgba(46,16,101,.4)}
 .fwcard:hover{transform:translateY(-6px);border-color:rgba(200,255,0,.4)}
 .fwic{font-size:36px;margin-bottom:14px;color:var(--green);display:flex;justify-content:center}
-.fwt{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--white);margin-bottom:10px;text-transform:uppercase;letter-spacing:.03em}
+.fwt{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:22px;color:var(--white);margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
+.fwt span.bg3{background:var(--p1);padding:1px 10px;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone;text-shadow:1px 1px 0 var(--p3),2px 2px 0 var(--p3)}
 .fwd{font-size:13px;color:var(--tb);line-height:1.7}
 #forwho-grid{grid-template-columns:repeat(4,1fr)}
 @media(max-width:900px){#forwho-grid{grid-template-columns:repeat(2,1fr)}}
@@ -488,7 +492,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 @media(max-width:480px){#forwho-grid{grid-template-columns:1fr}}
 
 /* FAQ */
-.faq-item{background:rgba(255,255,255,.06);border:1px solid rgba(196,181,253,.2);border-radius:16px;overflow:hidden;transition:border-color .3s}
+.faq-item{background:linear-gradient(145deg,rgba(109,40,217,.6),rgba(76,29,149,.8));border:1px solid rgba(196,181,253,.3);border-radius:16px;overflow:hidden;transition:border-color .3s;box-shadow:3px 3px 0 rgba(46,16,101,.7),6px 6px 0 rgba(46,16,101,.4)}
 .faq-item.open{border-color:rgba(200,255,0,.4)}
 .faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:600;color:var(--white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq-icon{font-size:22px;color:var(--green);flex-shrink:0;transition:transform .3s;font-weight:300;line-height:1}
@@ -599,11 +603,6 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <p class="ld" style="margin-top:16px">Por trás da Finder Travel está <strong style="color:var(--white)">Ana Carolina</strong>, uma profissional movida por propósito: facilitar a vida de quem quer viajar com segurança, economia e tranquilidade.</p>
       <p class="ld" style="margin-top:12px">Com formação em publicidade e uma trajetória marcada por coragem, Ana construiu sua história enfrentando desafios que fortaleceram sua visão de atendimento humano e próximo.</p>
       <p class="ld" style="margin-top:12px">Mais do que vender passagens, ela acredita em <strong style="color:var(--green)">cuidar de pessoas</strong>. Seu diferencial está na escuta, na transparência e na dedicação em encontrar sempre a melhor solução — como se cada viagem fosse a sua própria.</p>
-      <ul class="fl" style="margin-top:24px">
-        <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div><div class="fit">Atendimento Personalizado</div><div class="fid">Cada cliente recebe atenção única, do primeiro contato ao retorno.</div></div></li>
-        <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="fit">Transparência Total</div><div class="fid">Sem letras miúdas, sem surpresas. Você sabe exatamente o que está contratando.</div></div></li>
-        <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16M8 22V12M16 22V12"/><rect x="6" y="2" width="12" height="13" rx="2"/></svg></div><div><div class="fit">Clientes por Todo o Brasil</div><div class="fid">Atendimento 100% digital — de qualquer estado, direto no seu WhatsApp.</div></div></li>
-      </ul>
       <div style="margin-top:28px">
         <a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="btn-g">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -718,7 +717,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         <div class="cf-num">01</div>
         <div class="cf-icon-wrap" style="background:linear-gradient(135deg,rgba(200,255,0,.2),rgba(200,255,0,.05));border-color:rgba(200,255,0,.4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="34" height="34" style="color:var(--green)"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
         <div class="cf-badge" style="background:rgba(200,255,0,.15);color:var(--green);border-color:rgba(200,255,0,.3)">Resposta rápida</div>
-        <h3 class="cf-title">Fale com a gente</h3>
+        <h3 class="cf-title"><span class="bg3">Fale com a gente</span></h3>
         <p class="cf-desc">Manda uma mensagem pelo WhatsApp ou preenche a cotação acima. Conta o destino, as datas e o orçamento — a gente cuida do resto.</p>
         <a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="cf-cta">Falar agora →</a>
       </div>
@@ -727,7 +726,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         <div class="cf-num">02</div>
         <div class="cf-icon-wrap" style="background:linear-gradient(135deg,rgba(124,58,237,.35),rgba(124,58,237,.1));border-color:rgba(196,181,253,.5)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="34" height="34" style="color:#c4b5fd"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z"/><path d="M9 3v15M15 6v15"/></svg></div>
         <div class="cf-badge" style="background:rgba(196,181,253,.15);color:var(--pl);border-color:rgba(196,181,253,.3)">100% personalizado</div>
-        <h3 class="cf-title">Receba seu roteiro</h3>
+        <h3 class="cf-title"><span class="bg3">Receba seu roteiro</span></h3>
         <p class="cf-desc">Nossa equipe monta um roteiro sob medida com passagens, hospedagem, seguro viagem e tudo que você precisa — pelo melhor preço.</p>
         <a href="#cotacao" class="cf-cta" style="color:var(--pl)">Ver cotação →</a>
       </div>
@@ -736,7 +735,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         <div class="cf-num">03</div>
         <div class="cf-icon-wrap" style="background:linear-gradient(135deg,rgba(200,255,0,.2),rgba(200,255,0,.05));border-color:rgba(200,255,0,.4)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="34" height="34" style="color:var(--green)"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/></svg></div>
         <div class="cf-badge" style="background:rgba(200,255,0,.15);color:var(--green);border-color:rgba(200,255,0,.3)">Suporte 24h</div>
-        <h3 class="cf-title">Embarque tranquilo</h3>
+        <h3 class="cf-title"><span class="bg3">Embarque tranquilo</span></h3>
         <p class="cf-desc">Com tudo confirmado, é só fazer as malas! A gente acompanha você do check-in ao retorno, disponível a qualquer hora.</p>
         <a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="cf-cta">Começar agora →</a>
       </div>
@@ -764,23 +763,23 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="sg rv">
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80" alt="Passagens Aéreas" loading="lazy"/></div>
-        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/></svg></div><h3 class="svc-t">Passagens Aéreas</h3><p class="svc-d">Nacionais e internacionais com as melhores tarifas. Emissão rápida e segura.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Cotar agora →</a></div>
+        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/></svg></div><h3 class="svc-t"><span class="bg3">Passagens Aéreas</span></h3><p class="svc-d">Nacionais e internacionais com as melhores tarifas. Emissão rápida e segura.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Cotar agora →</a></div>
       </div>
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Hospedagens" loading="lazy"/></div>
-        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3 class="svc-t">Hospedagens</h3><p class="svc-d">Hotéis, pousadas e resorts selecionados para cada perfil de viajante.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Ver opções →</a></div>
+        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3 class="svc-t"><span class="bg3">Hospedagens</span></h3><p class="svc-d">Hotéis, pousadas e resorts selecionados para cada perfil de viajante.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Ver opções →</a></div>
       </div>
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Seguro Viagem" loading="lazy"/></div>
-        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="svc-t">Seguro Viagem</h3><p class="svc-d">Viaje com proteção total. Cobertura médica, bagagem e cancelamento.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Cotar seguro →</a></div>
+        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="svc-t"><span class="bg3">Seguro Viagem</span></h3><p class="svc-d">Viaje com proteção total. Cobertura médica, bagagem e cancelamento.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Cotar seguro →</a></div>
       </div>
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Pacotes Completos" loading="lazy"/></div>
-        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z"/><path d="M9 3v15M15 6v15"/></svg></div><h3 class="svc-t">Pacotes Completos</h3><p class="svc-d">Passagem + hotel + seguro em um pacote único e personalizado.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Ver pacotes →</a></div>
+        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z"/><path d="M9 3v15M15 6v15"/></svg></div><h3 class="svc-t"><span class="bg3">Pacotes Completos</span></h3><p class="svc-d">Passagem + hotel + seguro em um pacote único e personalizado.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Ver pacotes →</a></div>
       </div>
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80" alt="Consultoria Gratuita" loading="lazy"/></div>
-        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3 class="svc-t">Consultoria Gratuita</h3><p class="svc-d">Atendimento personalizado de acordo com seu orçamento e destino.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Falar agora →</a></div>
+        <div class="svc-body"><div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><h3 class="svc-t"><span class="bg3">Consultoria Gratuita</span></h3><p class="svc-d">Atendimento personalizado de acordo com seu orçamento e destino.</p><a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="svc-btn">Falar agora →</a></div>
       </div>
       <div class="svc-card">
         <div class="svc-thumb"><img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80" alt="Suporte 24 Horas" loading="lazy"/></div>
@@ -801,22 +800,22 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" class="rv" id="forwho-grid">
       <div class="fwcard">
         <div class="fwic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/></svg></div>
-        <h3 class="fwt">Viagem em Família</h3>
+        <h3 class="fwt"><span class="bg3">Viagem em Família</span></h3>
         <p class="fwd">Pacotes completos com tudo incluso para toda família curtir sem preocupação.</p>
       </div>
       <div class="fwcard">
         <div class="fwic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <h3 class="fwt">Lua de Mel</h3>
+        <h3 class="fwt"><span class="bg3">Lua de Mel</span></h3>
         <p class="fwd">Roteiros românticos e exclusivos para a viagem mais especial da sua vida.</p>
       </div>
       <div class="fwcard">
         <div class="fwic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
-        <h3 class="fwt">Grupos e Excursões</h3>
+        <h3 class="fwt"><span class="bg3">Grupos e Excursões</span></h3>
         <p class="fwd">Organizamos tudo para grupos de amigos, empresas e excursões com desconto especial.</p>
       </div>
       <div class="fwcard">
         <div class="fwic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="32" height="32"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-        <h3 class="fwt">Intercâmbio</h3>
+        <h3 class="fwt"><span class="bg3">Intercâmbio</span></h3>
         <p class="fwd">Passagens, seguro e orientação completa para quem vai estudar no exterior.</p>
       </div>
     </div>
@@ -859,9 +858,9 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="wrap">
     <div class="rv"><span class="tag">Nossos Pacotes</span><h2 class="h2"><span class="bg">Escolha seu</span> <span class="bgg">Pacote</span></h2><p class="ld" style="margin:12px auto 0">Pacotes personalizados para todo perfil de viajante. Todos com consultoria gratuita incluída.</p></div>
     <div class="pg rv">
-      <div class="pc"><div class="pn">Explorador</div><div class="pd">Ideal para turismo nacional com praticidade</div><ul class="pf"><li>Passagem aérea nacional</li><li>Hospedagem econômica selecionada</li><li>Seguro viagem básico</li><li>Suporte via WhatsApp</li></ul><a href="https://wa.me/5581994816709" class="btn-o" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
-      <div class="pc hot"><div class="pbdg">Mais Popular</div><div class="pn">Viajante</div><div class="pd">Completo para viagens nacionais e internacionais</div><ul class="pf"><li>Passagem nacional ou internacional</li><li>Hospedagem selecionada por especialistas</li><li>Seguro viagem completo</li><li>Suporte 24h dedicado</li><li>Transfer no destino</li></ul><a href="https://wa.me/5581994816709" class="btn-g" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
-      <div class="pc"><div class="pn">Premium</div><div class="pd">Experiência exclusiva para quem exige o melhor</div><ul class="pf"><li>Passagens internacionais premium</li><li>Hotéis e resorts 4 e 5 estrelas</li><li>Seguro viagem premium total</li><li>Concierge exclusivo 24h</li><li>Roteiro personalizado completo</li></ul><a href="https://wa.me/5581994816709" class="btn-o" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
+      <div class="pc"><div class="pn"><span class="bg3">Explorador</span></div><div class="pd">Ideal para turismo nacional com praticidade</div><ul class="pf"><li>Passagem aérea nacional</li><li>Hospedagem econômica selecionada</li><li>Seguro viagem básico</li><li>Suporte via WhatsApp</li></ul><a href="https://wa.me/5581994816709" class="btn-o" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
+      <div class="pc hot"><div class="pbdg">Mais Popular</div><div class="pn"><span class="bg3">Viajante</span></div><div class="pd">Completo para viagens nacionais e internacionais</div><ul class="pf"><li>Passagem nacional ou internacional</li><li>Hospedagem selecionada por especialistas</li><li>Seguro viagem completo</li><li>Suporte 24h dedicado</li><li>Transfer no destino</li></ul><a href="https://wa.me/5581994816709" class="btn-g" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
+      <div class="pc"><div class="pn"><span class="bg3">Premium</span></div><div class="pd">Experiência exclusiva para quem exige o melhor</div><ul class="pf"><li>Passagens internacionais premium</li><li>Hotéis e resorts 4 e 5 estrelas</li><li>Seguro viagem premium total</li><li>Concierge exclusivo 24h</li><li>Roteiro personalizado completo</li></ul><a href="https://wa.me/5581994816709" class="btn-o" style="width:100%;justify-content:center" target="_blank" rel="noopener noreferrer">Solicitar Orçamento →</a></div>
     </div>
   </div>
 </section>
@@ -871,7 +870,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 <section style="padding:64px 0" id="faq">
   <div class="wrap">
     <div style="text-align:center;margin-bottom:48px" class="rv">
-      <span class="tag">Dúvidas frequentes</span>
+      <span class="tag">Tire suas dúvidas</span>
       <h2 class="h2"><span class="bg">Perguntas</span> <span class="bgg">Frequentes</span></h2>
     </div>
     <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px" class="rv">
