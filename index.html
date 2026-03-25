@@ -321,7 +321,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   .sg{grid-template-columns:repeat(2,1fr)}
 
   /* WHY */
-  .wi{grid-template-columns:1fr;gap:48px}
+  .wi{grid-template-columns:1fr;gap:24px}
   .wim{height:320px;order:-1}
   .wia{width:60%;height:85%}
   .wib{width:48%;height:52%}
@@ -348,6 +348,9 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
    RESPONSIVE — MOBILE (≤768px)
    ============================================= */
 @media(max-width:768px){
+  section[style*="padding:64px"]{padding:40px 0!important}
+  .fq-section{padding:40px 0}
+
   /* NAV */
   .nb-ul,.nb-btn{display:none}
   .hbg{display:flex}
@@ -421,7 +424,10 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
    ============================================= */
 @media(max-width:480px){
   body{font-size:14px}
-  .h2{font-size:22px}
+  section[style*="padding:64px"]{padding:32px 0!important}
+  .fq-section{padding:32px 0}
+  .fw{padding:32px 0 20px}
+  .h2{font-size:22px;margin-bottom:10px}
   .h1{font-size:14vw;white-space:normal;text-align:center;margin-bottom:0;line-height:1}
 
   /* NAV */
@@ -599,7 +605,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
     <div class="rv">
       <span class="tag">✈️ Sobre a Fundadora</span>
-      <h2 class="h2"><span class="bg">Viagem com quem</span><br/><span class="bgg">realmente cuida</span></h2>
+      <h2 class="h2"><span class="bg">Viagem com quem</span> <span class="bgg">realmente cuida</span></h2>
       <p class="ld" style="margin-top:16px">Por trás da Finder Travel está <strong style="color:var(--white)">Ana Carolina</strong>, uma profissional movida por propósito: facilitar a vida de quem quer viajar com segurança, economia e tranquilidade.</p>
       <p class="ld" style="margin-top:12px">Com formação em publicidade e uma trajetória marcada por coragem, Ana construiu sua história enfrentando desafios que fortaleceram sua visão de atendimento humano e próximo.</p>
       <p class="ld" style="margin-top:12px">Mais do que vender passagens, ela acredita em <strong style="color:var(--green)">cuidar de pessoas</strong>. Seu diferencial está na escuta, na transparência e na dedicação em encontrar sempre a melhor solução — como se cada viagem fosse a sua própria.</p>
