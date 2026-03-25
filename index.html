@@ -34,7 +34,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "3000"
+    "reviewCount": "150"
   }
 }
 </script>
@@ -264,10 +264,10 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .pf{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:24px}
 .pf li{display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--tb)}
 .pf li::before{content:'✓';color:var(--green);font-weight:700;font-size:12px;flex-shrink:0}
-/* CTA */
-.cs{padding:64px 24px;background:linear-gradient(135deg,var(--p2) 0%,var(--p1) 50%,var(--p2) 100%);text-align:center;position:relative;overflow:hidden}
-
-.cin{position:relative;z-index:2;max-width:660px;margin:0 auto}
+/* CTA 3D */
+.cs{padding:80px 24px;background:linear-gradient(135deg,var(--p2) 0%,var(--p1) 50%,var(--p2) 100%);text-align:center;position:relative;overflow:hidden}
+.cs::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,255,0,.08) 0%,transparent 60%);pointer-events:none}
+.cin{position:relative;z-index:2;max-width:700px;margin:0 auto}
 .ch2{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(34px,5vw,62px);letter-spacing:-.01em;text-transform:uppercase;line-height:1.1;margin-bottom:20px;color:var(--white)}
 .ch2 .g{color:var(--green)}
 .cp{font-size:16px;color:var(--tb);line-height:1.8;margin-bottom:36px;max-width:460px;margin-left:auto;margin-right:auto}
@@ -276,6 +276,33 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .wa svg{width:22px;height:22px;fill:#fff;flex-shrink:0}
 .wa::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);animation:btnShine 2.5s ease-in-out infinite}
 .cn{margin-top:16px;font-size:12px;color:var(--tf);letter-spacing:.06em}
+/* 3D ROOM */
+.room-wrap{width:100%;max-width:900px;margin:0 auto 40px;position:relative;overflow:hidden;border-radius:20px}
+.room-content{display:block;transform-origin:center center}
+.room-full{position:relative;width:100%;height:0;padding-bottom:56.25%;overflow:hidden;background:#020818}
+.room-full .hue-anim{position:absolute;inset:0;animation:roomHue 20s ease-in-out infinite;z-index:0}
+@keyframes roomHue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(60deg)}}
+.room-inner{position:absolute;inset:0;perspective:600px;z-index:1}
+.room-cube{position:absolute;width:54000px;height:100%;transform-style:preserve-3d;transform-origin:center center}
+.room-face{position:absolute;display:flex;align-items:center;backface-visibility:hidden}
+.room-face.r-top{width:54000px;height:300px;top:0;left:0;transform-origin:center bottom;transform:rotateX(45deg) translateZ(0);background:linear-gradient(180deg,#020818 0%,rgba(109,40,217,.3) 100%);border-bottom:2px solid rgba(200,255,0,.4)}
+.room-face.r-bottom{width:54000px;height:300px;bottom:0;left:0;transform-origin:center top;transform:rotateX(-45deg);background:linear-gradient(0deg,#020818 0%,rgba(46,16,101,.4) 100%);border-top:2px solid rgba(200,255,0,.3);opacity:.6}
+.room-face.r-left{width:54000px;height:100%;top:0;left:0;transform-origin:center center;animation:roomScrollLeft 180s linear infinite;white-space:nowrap;overflow:hidden}
+.room-face.r-left .r-text{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(48px,8vw,80px);color:rgba(255,255,255,.08);text-transform:uppercase;letter-spacing:.08em;line-height:1;padding:0 40px;display:inline-block}
+.room-face.r-left .r-text span{color:rgba(200,255,0,.15)}
+.room-face.r-back{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:5}
+.room-face.r-back .r-title{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(28px,6vw,64px);color:var(--white);text-transform:uppercase;text-align:center;line-height:1.1;text-shadow:0 0 60px rgba(200,255,0,.3),0 0 120px rgba(109,40,217,.4);animation:roomTextGlow 4s ease-in-out infinite}
+.room-face.r-back .r-title span{color:var(--green);display:block}
+@keyframes roomTextGlow{0%,100%{text-shadow:0 0 40px rgba(200,255,0,.2),0 0 80px rgba(109,40,217,.3)}50%{text-shadow:0 0 80px rgba(200,255,0,.5),0 0 160px rgba(109,40,217,.5)}}
+@keyframes roomScrollLeft{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.room-glow-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;height:3px;background:var(--green);box-shadow:0 0 30px var(--green),0 0 60px var(--green);opacity:.5;z-index:6;border-radius:2px}
+.room-glow-bot{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:60%;height:2px;background:var(--green);box-shadow:0 0 20px var(--green),0 0 40px rgba(200,255,0,.3);opacity:.3;z-index:6;border-radius:2px}
+.room-lines{position:absolute;inset:0;z-index:2;pointer-events:none;overflow:hidden}
+.room-lines .rl{position:absolute;background:rgba(200,255,0,.08);box-shadow:0 0 8px rgba(200,255,0,.1)}
+.rl-h{width:100%;height:1px}
+.rl-v{width:1px;height:100%}
+.room-reflect{position:absolute;bottom:0;left:0;right:0;height:40%;z-index:3;background:linear-gradient(to top,rgba(200,255,0,.03),transparent);-webkit-mask-image:linear-gradient(to top,rgba(0,0,0,.3),transparent);mask-image:linear-gradient(to top,rgba(0,0,0,.3),transparent);pointer-events:none}
+@media(max-width:600px){.room-wrap{border-radius:14px}.room-face.r-back .r-title{font-size:clamp(22px,7vw,36px)}}
 /* FOOTER */
 .fw{background:rgba(20,5,50,.97);border-top:3px solid var(--green);padding:64px 0 28px;position:relative;overflow:hidden;z-index:1}
 .fw .wrap{position:relative;z-index:1}
@@ -527,7 +554,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   </div>
 </div>
 
-<div class="mq" aria-hidden="true"><div class="mq-t"><span>Passagens Aéreas</span><span>Hospedagens</span><span>Seguro Viagem</span><span>+3.000 Emissões</span><span>Atendimento Personalizado</span><span>Suporte 24h</span><span>Agência Certificada</span><span>Melhor Custo-Benefício</span><span>Passagens Aéreas</span><span>Hospedagens</span><span>Seguro Viagem</span><span>+3.000 Emissões</span><span>Atendimento Personalizado</span><span>Suporte 24h</span><span>Agência Certificada</span><span>Melhor Custo-Benefício</span></div></div>
+<div class="mq" aria-hidden="true"><div class="mq-t"><span>Passagens Aéreas</span><span>Hospedagens</span><span>Seguro Viagem</span><span>Cotação Gratuita</span><span>Atendimento Personalizado</span><span>Suporte 24h</span><span>Agência Certificada</span><span>Melhor Custo-Benefício</span><span>Passagens Aéreas</span><span>Hospedagens</span><span>Seguro Viagem</span><span>Cotação Gratuita</span><span>Atendimento Personalizado</span><span>Suporte 24h</span><span>Agência Certificada</span><span>Melhor Custo-Benefício</span></div></div>
 
 <nav class="nb" id="nav" role="navigation" aria-label="Menu principal">
   <a href="#" class="nb-logo" style="display:flex;align-items:center;gap:10px"><img src="images/img_jpg_001.jpg" alt="Finder Travel" style="height:44px;width:44px;object-fit:cover;border-radius:50%;flex-shrink:0;display:block;"/><span style="font-family:'Syne',sans-serif;font-weight:600;font-size:11px;color:var(--white);letter-spacing:.08em;text-transform:uppercase">Finder Travel</span></a>
@@ -558,7 +585,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   <div class="particle p5" style="bottom:-10px"></div>
   <div class="particle p6" style="bottom:-10px"></div>
   <div class="hc">
-    <div class="pill">Agência Certificada · Cadastur Ativo · +3.000 Viagens</div>
+    <div class="pill">Agência Certificada · Cadastur Ativo · Avaliação 5 Estrelas</div>
     <h1 class="h1">FINDER <span class="ac">TRAVEL</span></h1>
     <p class="sub">Sua viagem dos sonhos começa aqui.</p>
     <div class="ctas">
@@ -595,7 +622,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <ul class="fl" style="margin-top:24px">
         <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div><div class="fit">Atendimento Personalizado</div><div class="fid">Cada cliente recebe atenção única, do primeiro contato ao retorno.</div></div></li>
         <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="fit">Transparência Total</div><div class="fid">Sem letras miúdas, sem surpresas. Você sabe exatamente o que está contratando.</div></div></li>
-        <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16M8 22V12M16 22V12"/><rect x="6" y="2" width="12" height="13" rx="2"/></svg></div><div><div class="fit">+3.000 Viagens Realizadas</div><div class="fid">Uma trajetória de resultados reais e clientes satisfeitos.</div></div></li>
+        <li class="fi"><div class="fic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16M8 22V12M16 22V12"/><rect x="6" y="2" width="12" height="13" rx="2"/></svg></div><div><div class="fit">Clientes por Todo o Brasil</div><div class="fid">Atendimento 100% digital — de qualquer estado, direto no seu WhatsApp.</div></div></li>
       </ul>
       <div style="margin-top:28px">
         <a href="https://wa.me/5581994816709" target="_blank" rel="noopener noreferrer" class="btn-g">
@@ -642,7 +669,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div class="wim rv">
       <img class="wia" src="images/img_jpg_003.jpg" alt="Viajantes embarcando" loading="lazy"/>
       <img class="wib" src="images/img_jpg_004.jpg" alt="Malas de viagem" loading="lazy"/>
-      <div class="wbdg"><big>+3.000</big>VIAGENS REALIZADAS</div>
+      <div class="wbdg" style="font-size:13px;font-weight:700;letter-spacing:.05em">RESPOSTA<br>RÁPIDA</div>
     </div>
     <div class="rv">
       <span class="tag">Por que nos escolher</span>
@@ -664,7 +691,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     <div style="text-align:center" class="rv">
       <span class="tag">Depoimentos</span>
       <h2 class="h2">O que nossos <span class="g">Clientes dizem</span></h2>
-      <p class="ld" style="margin:12px auto 0">Mais de 3.000 viajantes já confiam na Finder Travel.</p>
+      <p class="ld" style="margin:12px auto 0">Viajantes de todo o Brasil já confiam na Finder Travel.</p>
     </div>
     <div class="tg-cols rv">
       <div class="tg-col"><div class="tg-col-inner">
@@ -884,7 +911,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         <button class="faq-q" onclick="toggleFaq(this)">
           Atendem fora de Recife? <span class="faq-icon">+</span>
         </button>
-        <div class="faq-a">Sim! Atendemos clientes de todo o Brasil 100% pelo WhatsApp. Já realizamos mais de 3.000 viagens para clientes de diferentes estados. Tudo é feito de forma digital e segura.</div>
+        <div class="faq-a">Sim! Atendemos clientes de todo o Brasil 100% pelo WhatsApp. Já ajudamos viajantes de diversos estados a encontrar as melhores condições. Tudo é feito de forma digital e segura.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)">
@@ -907,10 +934,31 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
     </div>
   </div>
 </section>
-<!-- CTA FINAL -->
+<!-- CTA FINAL 3D -->
 <section class="cs">
   <div class="cin rv">
-    <h2 class="ch2">Pronto para<br/><span class="g">Embarcar?</span></h2>
+    <!-- CUBO 3D -->
+    <div class="cube-scene">
+      <div class="cube-3d">
+        <div class="face front">Pronto para<br/><span>Embarcar?</span></div>
+        <div class="face back">Sua viagem<br/><span>começa aqui</span></div>
+        <div class="face right">Pronto para<br/><span>Embarcar?</span></div>
+        <div class="face left">Sua viagem<br/><span>começa aqui</span></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+    <!-- REFLEXO -->
+    <div class="cube-reflect">
+      <div class="cube-3d">
+        <div class="face front">Pronto para<br/><span>Embarcar?</span></div>
+        <div class="face back">Sua viagem<br/><span>começa aqui</span></div>
+        <div class="face right">Pronto para<br/><span>Embarcar?</span></div>
+        <div class="face left">Sua viagem<br/><span>começa aqui</span></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
     <p class="cp">Fale agora com a Ana e receba sua cotação personalizada em minutos. Sem compromisso, sem burocracia.</p>
     <a href="https://wa.me/5581994816709" class="wa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultoria Gratuita pelo WhatsApp</a>
   </div>
