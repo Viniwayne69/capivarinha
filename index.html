@@ -524,8 +524,25 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 }
 @media(max-width:768px){
   #mascot-widget{display:none!important}
+  .social-widgets-mobile{display:flex!important;flex-direction:column}
+  .hero{padding-bottom:24px!important;min-height:auto!important}
+  .hc{padding-bottom:0!important}
+  .scrl{display:none!important}
+  #fundadora{padding-top:16px!important}
 }
+@keyframes swSlideUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.sw-animate.sw-visible{animation:swSlideUp .6s ease forwards}
+.sw-card:nth-child(2).sw-visible{animation-delay:.15s}
 @media(max-width:768px){}
+@media(min-width:769px){
+  #fundadora .wi{grid-template-columns:1fr 1fr!important;grid-template-rows:auto auto;gap:20px 72px!important}
+  #fundadora .wim{grid-column:1;grid-row:1}
+  #fundadora .wi>.rv{grid-column:2;grid-row:1/3}
+  #fundadora .fundadora-video{grid-column:1;grid-row:2;margin-top:0!important}
+}
 </style>
 </head>
 <body>
@@ -595,6 +612,29 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
       <div><span class="sn" data-target="24" data-suffix="h">0</span><span class="sl">Horas de Suporte</span></div>
       <div><span class="sn" data-target="100" data-suffix="%">0</span><span class="sl">Clientes Satisfeitos</span></div>
     </div>
+    <!-- Social Widgets Mobile -->
+    <div class="social-widgets-mobile" style="display:none;gap:10px;padding:0 20px;margin-top:4px">
+      <a href="https://www.instagram.com/agenciafindertravel/" target="_blank" rel="noopener noreferrer" class="sw-card sw-animate" style="display:flex;align-items:center;gap:14px;background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.4);border-radius:18px;padding:12px 14px;text-decoration:none;color:var(--white);backdrop-filter:blur(12px);opacity:0;transform:translateY(20px)">
+        <div style="width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#833AB4,#FD1D1D,#F77737);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:13px;line-height:1.2">@agenciafindertravel</div>
+          <div style="font-size:11px;opacity:.7;margin-top:2px">Siga no Instagram</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:auto;opacity:.5"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+      <a href="https://open.spotify.com/playlist/6rTtCnA3PwPIbY1bVLbIJg?pi=D3Xsf7_0SRmXj&nd=1&dlsi=ce29a77eb0084d3d" target="_blank" rel="noopener noreferrer" class="sw-card sw-animate" style="display:flex;align-items:center;gap:14px;background:rgba(139,92,246,.2);border:1px solid rgba(139,92,246,.4);border-radius:18px;padding:12px 14px;text-decoration:none;color:var(--white);backdrop-filter:blur(12px);opacity:0;transform:translateY(20px)">
+        <div style="width:38px;height:38px;border-radius:12px;background:#1DB954;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:13px;line-height:1.2">Playlist Finder Travel</div>
+          <div style="font-size:11px;opacity:.7;margin-top:2px">Ouça no Spotify</div>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:auto;opacity:.5"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
   </div>
   <div class="scrl"><div class="scrl-l"></div></div>
 </section>
@@ -603,8 +643,8 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 <!-- SOBRE A FUNDADORA -->
 <section style="padding:64px 0" id="fundadora">
   <div class="wi rv">
-    <div class="wim" style="height:520px">
-      <img class="wia" src="images/img_jpg_002.jpg" alt="Ana Carolina — Fundadora da Finder Travel" style="width:75%;height:90%;object-fit:cover;border-radius:28px;position:absolute;top:0;right:0;border:1px solid rgba(196,181,253,.25)"/>
+    <div class="wim" style="height:400px">
+      <img class="wia" src="images/img_jpg_002.jpg" alt="Ana Carolina — Fundadora da Finder Travel" style="width:85%;height:100%;object-fit:cover;object-position:center 30%;border-radius:28px;position:absolute;top:0;right:0;border:1px solid rgba(196,181,253,.25)"/>
       <div style="position:absolute;bottom:20px;left:0;background:var(--green);color:var(--p3);font-weight:800;font-size:12px;padding:14px 18px;border-radius:16px;z-index:3;box-shadow:0 0 36px rgba(200,255,0,.35);white-space:nowrap">
         <big style="display:block;font-size:22px;line-height:1;margin-bottom:2px">Ana Carolina</big>
         Fundadora · Finder Travel
@@ -623,15 +663,16 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
         </a>
       </div>
     </div>
+    <video class="fundadora-video" style="width:100%;margin-top:24px;border-radius:20px;border:1px solid rgba(196,181,253,.25);aspect-ratio:1/1;object-fit:cover" controls playsinline preload="metadata">
+      <source src="anafinder.MP4" type="video/mp4">
+    </video>
   </div>
 </section>
 <!-- COTAÇÃO -->
 <section class="fq-section" id="cotacao">
   <div class="fq-inner">
     <div style="text-align:center;margin-bottom:0" class="rv">
-      <span class="tag">Cotação Gratuita</span>
-      <h2 class="h2"><span class="bg">Monte sua</span> <span class="bgg">viagem dos sonhos</span></h2>
-      <p class="ld" style="margin:12px auto 0">Preencha abaixo e receba sua cotação personalizada direto no WhatsApp em minutos.</p>
+      <h2 class="h2" style="white-space:nowrap"><span class="bg">Monte sua</span> <span class="bgg">viagem dos sonhos</span></h2>
     </div>
     <div class="fq-box rv">
       <div class="fq-grid">
@@ -987,6 +1028,8 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 function countUp(el,t,sfx){const d=1800,s=performance.now();(function tick(n){const p=Math.min((n-s)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(e*t).toLocaleString('pt-BR')+(sfx||'');p<1&&requestAnimationFrame(tick)})(s)}
 const co=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){countUp(e.target,+e.target.dataset.target,e.target.dataset.suffix||'');co.unobserve(e.target)}})},{threshold:.6});
 document.querySelectorAll('[data-target]').forEach(el=>co.observe(el));
+const swObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('sw-visible');swObs.unobserve(e.target)}})},{threshold:.3});
+document.querySelectorAll('.sw-animate').forEach(el=>swObs.observe(el));
 var modalData={"Rio de Janeiro":["https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&q=80","https://images.unsplash.com/photo-1548963670-c68e52db0e43?w=800&q=80","https://images.unsplash.com/photo-1518639192441-8fce0a366e2e?w=800&q=80"],"Maldivas":["https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=800&q=80","https://images.unsplash.com/photo-1540202404-d0a196e9f8d3?w=800&q=80","https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"],"Paris":["https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&q=80","https://images.unsplash.com/photo-1520939817895-060bdaf4fe1b?w=800&q=80","https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80"],"Tóquio":["https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80","https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80","https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&q=80"],"Lisboa":["https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80","https://images.unsplash.com/photo-1513735492246-483525079686?w=800&q=80","https://images.unsplash.com/photo-1548707309-dcebeab9ea9b?w=800&q=80"],"Canadá":["images/img_jpg_014.jpg","images/img_jpg_015.jpg","images/img_jpg_016.jpg"],"Nova York":["images/img_jpg_017.jpg","images/img_jpg_018.jpg","images/img_jpg_019.jpg"],"Santorini":["https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80","https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80","https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80"],"Cancún":["https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&q=80","https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=800&q=80","https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80"],"Noronha":["https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&q=80","https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80","https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"],"Buenos Aires":["images/img_jpg_020.jpg","images/img_jpg_021.jpg","images/img_jpg_022.jpg"],"Bali":["images/img_jpg_023.jpg","images/img_jpg_024.jpg","images/img_jpg_025.jpg"]};
 var mc=0,mi=[],md='';
 function openDestModal(d){md=d;mi=modalData[d]||[];mc=0;document.getElementById('modal-title').textContent=d;document.getElementById('modal-wa').href='https://wa.me/5581994816709?text=Ol%C3%A1!%20Tenho%20interesse%20em%20uma%20viagem%20para%20'+encodeURIComponent(d)+'.%20Podem%20me%20ajudar?';var t=document.getElementById('modal-thumbs');t.innerHTML='';mi.forEach(function(url,i){var img=document.createElement('img');img.src=url;img.style.cssText='width:80px;height:58px;object-fit:cover;border-radius:10px;cursor:pointer;transition:all .25s;opacity:.6;border:2px solid transparent;flex-shrink:0';img.onclick=function(){setModalImg(i);};t.appendChild(img);});setModalImg(0);var modal=document.getElementById('dest-modal');modal.style.display='flex';document.body.style.overflow='hidden';}
