@@ -213,6 +213,7 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 .av{width:44px;height:44px;border-radius:50%;border:2px solid var(--p4);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:16px;color:#fff}
 .tcn{font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:13px;color:var(--white);line-height:1.2}
 .tcd{font-size:11px;color:var(--green);margin-top:2px;font-weight:600;opacity:.85}
+
 @media(max-width:1024px){.tg-col:nth-child(3){display:none}}
 @media(max-width:768px){.h1{white-space:normal;font-size:clamp(42px,11.5vw,58px);text-align:center;letter-spacing:-.02em}.h1 .ac{display:block}.tg-col:nth-child(2){display:none}.tc{width:260px}}
 /* COMO FUNCIONA */
@@ -391,6 +392,11 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
   .wim{height:260px}
   .wia{width:65%;height:80%}
   .wib{width:50%;height:50%}
+
+  /* FUNDADORA — cortar notebook da foto + reduzir gap */
+  #fundadora{padding-top:0!important;margin-top:-40px}
+  #fundadora .wim{height:280px!important;overflow:hidden}
+  #fundadora .wim img{width:100%!important;height:100%!important;position:absolute!important;top:0!important;left:0!important;right:auto!important;object-fit:cover!important;object-position:top center!important}
   .wbdg{font-size:10px;padding:10px 12px}
   .wbdg big{font-size:20px}
 
@@ -573,11 +579,11 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 
 /* Badge Google 3D rotation */
 @keyframes badge3dRotate{
-    0%{transform:perspective(600px) rotateY(0deg)}
-    25%{transform:perspective(600px) rotateY(8deg) rotateX(4deg)}
-    50%{transform:perspective(600px) rotateY(0deg)}
-    75%{transform:perspective(600px) rotateY(-8deg) rotateX(-4deg)}
-    100%{transform:perspective(600px) rotateY(0deg)}
+    0%{transform:translate(-50%,-50%) translateZ(60px) perspective(600px) rotateY(0deg)}
+    25%{transform:translate(-50%,-50%) translateZ(60px) perspective(600px) rotateY(8deg) rotateX(4deg)}
+    50%{transform:translate(-50%,-50%) translateZ(60px) perspective(600px) rotateY(0deg)}
+    75%{transform:translate(-50%,-50%) translateZ(60px) perspective(600px) rotateY(-8deg) rotateX(-4deg)}
+    100%{transform:translate(-50%,-50%) translateZ(60px) perspective(600px) rotateY(0deg)}
 }
 .badge-3d{animation:badge3dRotate 4s ease-in-out infinite;transform-style:preserve-3d}
 
